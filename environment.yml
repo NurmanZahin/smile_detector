@@ -1,0 +1,12 @@
+name: smile-detector
+channels:
+  - fastai
+  - pytorch
+  - anaconda
+dependencies:
+  - python==3.7
+  - fastai
+  - pip:
+      - open-cv
+      - flask
+      - flask-sqlalchemy
