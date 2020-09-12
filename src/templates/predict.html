@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+
+{% block head %}
+<title>Smile Detector</title>
+{% endblock %}
+
+{% block body %}
+<div class="container">
+  <h1>Smile Detection</h1>
+  <hr>
+  {% with messages = get_flashed_messages() %}
+  {% if messages %}
+  <small>{{ messages[0] }}</small>
+  {% endif %}
+  {% endwith %}
+  <form action="/predict" method="POST" enctype="multipart/form-data">
+    <div class="form-group">
+      <div class="custom-file">
+        <input type="file" class="custom-file-input" name="file" id="image" accept=".png, .jpg, .png"
+          onchange="previewImage(event)">
+        <label class="custom-file-label" for="image">Select image...</label>
+        <img src="" width="200" height="200" style="border:1px solid blue" id="your-image" />
+        <br>
+        <button type="submit" class="btn btn-primary">Classify</button>
+      </div>
+    </div>
+  </form>
+  <script>
+    var previewImage = function (event) {
+      var preview = document.getElementById('your-image');
+      preview.src = URL.createObjectURL(event.target.files[0]);
+      preview.style.display = "block";
+    };
+  </script>
+</div>
+{% endblock %}
