@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+{% block head %}
+<title>TensorFood Prediction</title>
+{% endblock %}
+
+{% block body %}
+<div class="container">
+<h1>Food Classification</h1>
+    <hr>
+    <h3>Prediction Completed!</h3>
+{% if all_images %}
+    <div>
+		<img src="{{ all_images }}" style="width: 50%; height: 50%">
+{% endif %}
+<p>
+	{% with messages = get_flashed_messages() %}
+	  {% if messages %}
+    <small>It seems like a <strong>{{ messages[0] }}</strong> with a <strong>{{ messages[1] }}%</strong> confidence.</small>
+	  {% endif %}
+	{% endwith %}
+</p>
+<p>
+  <a class="btn btn-primary" href="/predict" role="button">Classify Another Image &raquo;</a>
+</p>
+</div>
+{% endblock %}
+<br>
