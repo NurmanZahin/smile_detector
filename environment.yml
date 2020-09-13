@@ -9,7 +9,7 @@ dependencies:
   - pillow
   - markdown
   - pip:
-      - open-cv
+      - opencv_python
       - flask
       - flask-sqlalchemy
       - jupyterlab
