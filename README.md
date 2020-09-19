@@ -73,7 +73,7 @@ $ python -m src.inference path/to/input_image
 [mit-license-shield]: https://img.shields.io/github/license/othneildrew/Best-README-Template.svg?style=flat-square
 [mit-license-url]: https://badges.mit-license.org/
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=flat-square&logo=linkedin&colorB=555
-[linkedin-url]: www.linkedin.com/in/nurman-jupri-20655814a
+[linkedin-url]: https://www.linkedin.com/in/nurman-jupri-20655814a
 [product-screenshot]: images/screenshot.png
 [article1-url]: https://towardsdatascience.com/beginners-guide-to-building-a-singlish-ai-chatbot-7ecff8255ee
 [article2-url]: https://towardsdatascience.com/generating-singlish-text-messages-with-a-lstm-network-7d0fdc4593b6
