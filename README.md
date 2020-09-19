@@ -1,4 +1,3 @@
-[![MIT License][mit-license-shield]][mit-license-url]
 [![LinkedIn][linkedin-shield]][linkedin-url]
 
 # Smile Detector
@@ -22,9 +21,9 @@
 
 
 ## Introduction
-This is a simple image classification project when I had first learnt about computer vision. I had decided to make it into a simple web application using the flask.
+This is a simple image classification project when I had first learnt about computer vision. I had decided to make it 
+into a simple web application using the flask.
 
-Our group decided to focus on an nlp project that will be deployed on telegram. 
 
 ## Getting Started
 
@@ -41,22 +40,24 @@ $ git clone https://github.com/NurmanZahin/smile_detector.git
 $ conda env create -f environment.yml
 $ conda activate smile-detector 
 ```
+### Installing dependencies
+Download the Olivetti dataset from [here](https://www.kaggle.com/sahilyagnik/olivetti-faces). Go through the notebooks 
+to create the necessary folders and to train your model. With the finetuned model ready, you can now run the web app or
+do inference on your images.
 
 ## Usage
-
+To run the web application 
 ```shell
-$ python -m src.app
+$ python -m src.app path/to/input_image
+```
+
+To run the smile detector
+```shell
+$ python -m src.inference path/to/input_image
 ```
 
 
-
 ## Acknowledgements
-### Articles 
-- 
-
-### Codes that were used
-- 
-
 ### Dataset
 - Olivetti Faces Dataset (AT&T Laboratories Cambridge)
 

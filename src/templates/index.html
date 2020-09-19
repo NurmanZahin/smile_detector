@@ -32,7 +32,7 @@
           </h2>
         </div>
         <br>
-        <p>This classification model uses a ResNet50V2 architecture as its backbone that has been pretrained on <a
+        <p>This classification model uses a MobileNetV2 architecture as its backbone that has been pretrained on <a
             href="http://www.image-net.org/" target="_blank">ImageNet</a>. </p>
       </div>
       <div class="col-md-4">
@@ -47,9 +47,9 @@
           </h2>
         </div>
         <br>
-        <p> The model was trained on the <strong>Olivetti faces dataset</strong>. Training images were augmented to make
-          the
-          model more robust.</p>
+        <p> The model was trained on the <strong>Olivetti faces dataset</strong>. Training images were preprocessed
+          using methods from MobileNetV2.
+        </p>
       </div>
       <div class="col-md-4">
         <div align="center">
@@ -67,7 +67,7 @@
           </h2>
         </div>
         <br>
-        <p> Accuracy of <strong>87%</strong> was achieved on the validation set. Adam optimizer and categorical cross
+        <p> Accuracy of <strong>70%</strong> was achieved on the validation set. Adam optimizer and categorical cross
           entropy loss function was used. </p>
       </div>
     </div>

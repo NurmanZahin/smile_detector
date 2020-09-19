@@ -1,15 +1,15 @@
 import logging
-import os
+import tensorflow as tf
+import cv2
 
-from flask import Flask, flash, request, jsonify, render_template, redirect, send_from_directory
+from flask import Flask, flash, request, render_template, redirect, send_from_directory
 from werkzeug.utils import secure_filename
 from base64 import b64encode
-import markdown
-import markdown.extensions.fenced_code
 
-# from .inference import predict_image, create_model, init_model
+
+from .inference import predict_image
 from .db import db_init
-from .models import FoodImages
+from .models import SmileImages
 
 logging.basicConfig(level=logging.INFO,
                     format='%(asctime)s:%(levelname)s:%(name)s:%(message)s')
@@ -19,6 +19,10 @@ app = Flask(__name__)
 app.secret_key = "secret key"
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///images.db'
 db_init(app)
+
+model_path = 'data/models/tf_mobilenetv2.h5'
+loaded_model = tf.keras.models.load_model(model_path)
+face_detector = cv2.CascadeClassifier('haarcascade_frontalface_default.xml')
 
 
 @app.route('/')
@@ -38,9 +42,9 @@ def predict():
 
         mime_type = file.mimetype
         filename = secure_filename(file.filename)
-        img = FoodImages(img=file.read(), name=filename, mime_type=mime_type)
+        img = SmileImages(img=file.read(), name=filename, mime_type=mime_type)
 
-        food_pred, confidence = predict_image(img.img, loaded_model)
+        food_pred, confidence, face_coords = predict_image(img.img, loaded_model, face_detector)
         flash(food_pred)
         flash(round(confidence*100, 2))
         image = b64encode(img.img).decode("utf-8")
