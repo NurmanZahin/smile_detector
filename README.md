@@ -6,18 +6,16 @@
 
 
 ## Table of Contents
-- [Smile Detector](#smile-detector)
-  - [Table of Contents](#table-of-contents)
-  - [Introduction](#introduction)
-  - [Getting Started](#getting-started)
-    - [Clone](#clone)
-    - [Installing dependencies](#installing-dependencies)
-  - [Usage](#usage)
-  - [Acknowledgements](#acknowledgements)
-    - [Articles](#articles)
-    - [Codes that were used](#codes-that-were-used)
-    - [Dataset](#dataset)
-  - [License](#license)
+- [Introduction](#introduction)
+- [Getting Started](#getting-started)
+  - [Clone](#clone)
+  - [Installing dependencies](#installing-dependencies)
+- [Usage](#usage)
+- [Acknowledgements](#acknowledgements)
+  - [Articles](#articles)
+  - [Codes that were used](#codes-that-were-used)
+  - [Dataset](#dataset)
+- [License](#license)
 
 
 ## Introduction
