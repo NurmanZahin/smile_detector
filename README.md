@@ -33,7 +33,7 @@ $ git clone https://github.com/NurmanZahin/smile_detector.git
 
 ### Installing dependencies
 - Create a new conda environment 
-- Install dependencies using the requirements.txt using [pip](https://pip.pypa.io/en/stable/installing/)
+- Install dependencies using the environment.yml
 ```shell
 $ conda env create -f environment.yml
 $ conda activate smile-detector 
